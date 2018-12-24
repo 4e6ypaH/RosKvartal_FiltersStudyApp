@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using FiltersStudyApp.Filters;
 
 namespace FiltersStudyApp
 {
@@ -8,6 +9,7 @@ namespace FiltersStudyApp
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new LogAttribute());
         }
     }
 }
